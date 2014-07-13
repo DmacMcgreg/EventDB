@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="630.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.PersonOverviewController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <SplitPane dividerPositions="0.4014285714285714" focusTraversable="true" prefHeight="285.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+          <children>
+            <TableView fx:id="eventTable" prefHeight="298.0" prefWidth="273.0" tableMenuButtonVisible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn fx:id="eventNameColumn" maxWidth="5000.0" minWidth="10.0" prefWidth="120.0" text="Event Name" />
+                <TableColumn fx:id="eventTypeColumn" maxWidth="5000.0" minWidth="10.0" prefWidth="120.0" text="Event Type" />
+                <TableColumn fx:id="eventDateColumn" maxWidth="5000.0" minWidth="10.0" prefWidth="120.0" text="Event Date" />
+              </columns>
+            </TableView>
+          </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="background">
+          <children>
+            <GridPane prefHeight="155.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="80.0">
+              <children>
+                <Label text="Event Name" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Label text="Event Type" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Label text="Location" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Label text="Date" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <Label fx:id="eventNameLabel" styleClass="label-bright" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <Label fx:id="eventTypeLabel" styleClass="label-bright" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label fx:id="eventLocationLabel" styleClass="label-bright" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Label fx:id="eventDateLabel" styleClass="label-bright" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="149.0" minWidth="10.0" prefWidth="83.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="231.0" minWidth="10.0" prefWidth="216.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="26.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="26.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="26.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="26.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="26.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <HBox id="HBox" alignment="CENTER" prefWidth="250.0" spacing="5.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+              <children>
+                <Button id="" mnemonicParsing="false" onAction="#handleNewPerson" prefWidth="80.0" text="New..." />
+                <Button mnemonicParsing="false" onAction="#handleEditPerson" prefWidth="80.0" text="Edit..." />
+                <Button mnemonicParsing="false" onAction="#handleDeletePerson" prefWidth="80.0" text="Delete" />
+              </children>
+            </HBox>
+            <Label styleClass="label-header" text="Event Details" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="13.0" /><ComboBox fx:id="queryBox" layoutX="14.0" layoutY="235.0" prefHeight="25.0" prefWidth="496.0" xmlns:fx="http://javafx.com/fxml" /><TextArea fx:id="output" layoutX="14.0" layoutY="268.0" prefHeight="200.0" prefWidth="200.0" />
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+  <stylesheets>
+    <URL value="@DarkTheme.css" />
+  </stylesheets>
+</AnchorPane>
